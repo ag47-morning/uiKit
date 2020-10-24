@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* 값 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+/* 값 설정 끝 */
+/* 초기화 { */
+html {
+  overflow-y: scroll; }
+
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.94em;
+  background: #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul, dl, dt, dd, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+legend {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999em;
+  overflow: hidden; }
+
+label, input, button, select, img {
+  vertical-align: middle;
+  font-size: 1.1em; }
+
+input, button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 1.1em; }
+
+input[type="submit"], button {
+  cursor: pointer; }
+
+textarea, select {
+  font-size: 1.1em; }
+
+select {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all; }
+
+hr {
+  display: none; }
+
+pre {
+  overflow-x: scroll;
+  font-size: 1.2em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, p, span, pre, i, b, a {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal; }
+
+/* } 초기화 끝  */
+/* 레이아웃 기본 설정 */
+#hd, #ft {
+  width: 100%; }
+
+#gnb, .sec_wr, .img_wr {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative; }
+
+#container {
+  width: 100%;
+  position: relative;
+  top: -95px; }
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
+section:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both; }
+
+/* 상단 레이아웃 */
+#hd {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  left: 0;
+  background: transparent;
+  z-index: 999999; }
+
+#gnb {
+  margin-top: 50px;
+  padding-top: 10px; }
+  #gnb:after {
+    clear: both;
+    visibility: hidden;
+    content: '';
+    display: block; }
+
+#logo {
+  float: left; }
+  #logo a {
+    overflow: hidden; }
+  #logo img {
+    height: 35px;
+    width: auto; }
+
+#tnb {
+  float: right; }
+  #tnb li {
+    display: inline-block; }
+    #tnb li a {
+      font-weight: bold;
+      color: #5b5b5b;
+      position: relative;
+      margin: 0 10px;
+      line-height: 35px;
+      padding: 10px;
+      font-size: 1.1em; }
+      #tnb li a:after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: #000;
+        width: 0;
+        transition: width .2s;
+        position: absolute;
+        bottom: 3px;
+        left: 10px; }
+    #tnb li.active a, #tnb li:hover a {
+      color: #000; }
+    #tnb li.active a:after, #tnb li:hover a:after {
+      width: 80%; }
+    #tnb li:last-child a {
+      padding-right: 0;
+      margin-right: 0; }
+
+/* 상단 레이아웃 끝 */
+/* 중단 레이아웃 */
+.path {
+  position: absolute; }
+
+.pic {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover; }
+
+.back {
+  background-image: url("../images/back.png"); }
+
+.line1 {
+  background-image: url("../images/line1.png"); }
+
+.line2 {
+  background-image: url("../images/line2.png"); }
+
+.dott {
+  background-image: url("../images/dott.png"); }
+
+.ring {
+  border: 9px solid #27debf;
+  border-radius: 50%;
+  background: transparent;
+  width: 39px;
+  height: 39px;
+  box-sizing: border-box;
+  opacity: 0.22; }
+
+.round {
+  border-radius: 50%;
+  background: #27debf;
+  width: 87px;
+  height: 87px;
+  opacity: 0.22; }
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 5px;
+  text-transform: capitalize; }
+
+.btn_m {
+  background: #27debf;
+  color: #fff; }
+
+.btn_w {
+  background: #fff;
+  color: #151d41; }
+
+.rd_btn {
+  border-radius: 26px;
+  color: #000;
+  font-weight: bold; }
+
+#home .back {
+  width: 994px;
+  height: 1096px;
+  left: 30%;
+  top: -230px; }
+#home .line1 {
+  width: 391px;
+  height: 468px;
+  left: -15%;
+  top: 217px; }
+#home .line2 {
+  width: 439px;
+  height: 406px;
+  left: 36%;
+  top: 299px; }
+#home .r1 {
+  top: 185px;
+  left: 81%; }
+#home .r2 {
+  top: 426px;
+  left: 99%; }
+#home .r3 {
+  top: 779px;
+  left: 101%; }
+#home .r4 {
+  top: 681px;
+  left: 34%; }
+#home .r5 {
+  top: 267px;
+  left: 32%; }
+#home .r6 {
+  top: 607px;
+  left: 4.5%; }
+#home .r7 {
+  top: 525px;
+  left: 52.4%;
+  opacity: 0.06; }
+#home .sec_wr::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both; }
+#home .sec_wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 18%; }
+#home .sec_wr > div {
+  display: inline-block;
+  vertical-align: bottom; }
+#home .sec_txt {
+  padding-left: 10%; }
+  #home .sec_txt h1 {
+    font-weight: normal;
+    font-size: 4.2em;
+    text-transform: capitalize;
+    line-height: 1.17;
+    letter-spacing: -3px; }
+    #home .sec_txt h1 b {
+      font-weight: bold;
+      letter-spacing: normal; }
+  #home .sec_txt p {
+    font-size: 1.75em;
+    line-height: 2.4;
+    color: #455a64; }
+  #home .sec_txt .st_btn {
+    margin: 47px 0 21px;
+    line-height: 1.7; }
+    #home .sec_txt .st_btn .rd_btn {
+      line-height: 2; }
+    #home .sec_txt .st_btn .more {
+      display: inline-block;
+      padding-left: 18px;
+      font-weight: bold;
+      font-size: 1.25em;
+      line-height: 1.67; }
+#home .sec_img {
+  background-image: url("../images/main.png");
+  width: 426px;
+  height: 396px; }
+
+/* 중단 레이아웃 끝 */
+/* 하단 레이아웃 */
+/* 하단 레이아웃 끝 */
+
+/*# sourceMappingURL=defalut.css.map */

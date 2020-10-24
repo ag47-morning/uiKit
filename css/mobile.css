@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* 값 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+/* 값 설정 끝 */
+@media (max-width: 1557px) {
+  #container {
+    overflow: hidden; } }
+
+/*# sourceMappingURL=mobile.css.map */
