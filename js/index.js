@@ -37,9 +37,9 @@ $(document).ready(function(){
     ////// }} scroll event //////
 })
 
-$(function(){
-    //// 새로고침 시 scrollTop : 0
-    $(window).on("beforeunload", function(){
-        $("html, body").stop().animate({scrollTop:0},0);
-    })
-})
+// $(function(){
+//     //// 새로고침 시 scrollTop : 0
+//     $(window).on("beforeunload", function(){
+//         $("html, body").stop().animate({scrollTop:0},0);
+//     })
+// })

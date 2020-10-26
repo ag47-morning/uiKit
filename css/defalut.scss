@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 값 설정 */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
 $font : 'Josefin Sans', sans-serif;
 
 $color_back : #fff;
@@ -16,7 +16,7 @@ $color_under : #0fbf61;
 html{overflow-y: scroll;}
 html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0;}
 body {margin: 0; padding: 0; font-size: 0.94em; background: $color_back;} //body 글씨크기
-h1, h2, h3, h4, h5, h6 {font-size: 1.2em; font-family: $font; font-weight: bold;} // h 글씨크기
+h1, h2, h3, h4, h5, h6 {font-size: 1.2em; font-family: $font; font-weight: bold; color: $color_head;} // h 글씨크기
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
 ul, dl, dt, dd, ol {margin: 0; padding: 0; list-style: none; }
 legend {position: absolute; margin: 0; padding: 0; font-size: 0; line-height: 0; text-indent: -9999em; overflow: hidden; }
@@ -25,20 +25,20 @@ input, button { margin: 0; padding: 0; outline: none; font-size: 1.1em; } //btn 
 input[type="submit"], button {cursor: pointer; }
 textarea, select {font-size: 1.1em;} // textarea 글씨크기
 select {margin: 0;}
-p {margin: 0; padding: 0; word-break: keep-all; }
+p {margin: 0; padding: 0; word-break: keep-all; color: $color_head;}
 hr {display: none; }
 pre {overflow-x: scroll; font-size: 1.2em; }
 table {border-collapse: collapse; border-spacing: 0;}
-a {color: #000; text-decoration: none;}
+a {text-decoration: none;}
 *, :after, :before {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-family: $font; font-weight: normal;}
+body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-family: $font; font-weight: normal; color: $color_head;}
 
 /* } 초기화 끝  */
 /* 레이아웃 기본 설정 */
 #hd, #ft {width: 100%;}
 #gnb, .sec_wr, .img_wr {max-width: 1140px; margin: 0 auto; padding: 0 10px; position: relative;}
 #container {width: 100%; position: relative; top: -95px;}
-section {width: 100%; height: 100vh; position: relative;}
+section {width: 100%; height: 98vh; position: relative;}
 section:after {content: ''; display: block; visibility: hidden; clear: both;}
 
 /* 상단 레이아웃 */
@@ -81,9 +81,13 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
 .btn_m {background: $color_point; color: $color_back;}
 .btn_w {background: $color_back; color: $color_head;}
 .rd_btn {border-radius: 26px; color: #000; font-weight: bold;}
+.category {
+    display: inline-block; color: $color_point; position: relative; text-transform: uppercase;
+    &:after {display: block; width: 100%; position: absolute; height: 80%; border-radius: 30px; background: $color_point; opacity: 0.1; top: 40%; left: 10%; content: '';}
+}
+.title {color: $color_head; font-weight: bold; line-height: 1.2; padding: 30px 0;}
 
 #home {
-    // overflow: hidden;
     .back {width: 994px; height: 1096px; left: 30%; top: -230px;}
     .line1 {width: 391px; height: 468px; left: -15%; top: 217px;}
     .line2 {width: 439px; height: 406px; left: 36%; top: 299px;}
@@ -95,26 +99,56 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
     .r6 {top: 607px; left: 4.5%;}
     .r7 {top: 525px; left: 52.4%; opacity: 0.06;}
     .sec_wr::after {content: ''; display: block; visibility: hidden; clear: both;}
-    .sec_wr {display: flex; justify-content: space-between; align-items: flex-end; padding-top: 18%;;}
-    .sec_wr > div {display: inline-block; vertical-align: bottom;}
+    .sec_wr {display: flex; justify-content: space-between; align-items: flex-end; padding-top: 17%;}
     .sec_txt {
         padding-left: 10%;
         h1 {
-            font-weight: normal; font-size: 4.2em; text-transform: capitalize; line-height: 1.17; letter-spacing: -3px;
-            b {font-weight: bold; letter-spacing: normal;}
+            font-weight: normal; font-size: 4.2em; text-transform: capitalize; line-height: 1.17; letter-spacing: -3px; color: #000;
+            b {font-weight: bold; letter-spacing: normal; color: #000;}
         }
         p {font-size: 1.75em; line-height: 2.4; color: #455a64;}
         .st_btn {
-            margin: 47px 0 21px; line-height: 1.7;
-            .rd_btn {line-height: 2;}
+            margin: 47px 0 21px; line-height: 1.7; 
+            .rd_btn {line-height: 2; font-weight: 600;}
             .more {display: inline-block; padding-left: 18px; font-weight: bold; font-size: 1.25em; line-height: 1.67;}
         }
     }
     .sec_img {
-        background-image: url('../images/main.png'); width: 426px; height: 396px; 
+        max-width: 426px;
+        img {width: 100%;}
     }
 }
 
+#about {
+    .sec_wr {display: flex; justify-content: center; max-width: 904px;}
+    .intro > div {flex-basis: 40%;}
+    .sec_img {
+        position: relative; text-align: center; margin-right: 50px; max-width: 450px;
+        background-image: url('../images/dott.png'); background-position: right top; background-repeat: no-repeat; background-size: 25%;
+        img {width: 431px;}
+    }
+    .rig {width: 50%; border: 30px solid $color_point; position: absolute; top: -16%; left: -13%; z-index: 2; box-sizing: border-box; max-width: 161.6px; border-radius: 50%;}
+    .rig:after{display: block; padding-bottom: 100%; content:'';}
+    .sec_txt {
+        padding-top: 34px; max-width: 322px;
+        h6 {font-size: 0.8em; }
+        h3 {font-size: 1.4em; text-transform: capitalize;}
+        p {line-height: 1.4; font-size: 1.2em; color: #000; margin-bottom: 55px;}
+        button {padding: 20px 45px; border: 0; font-size: 0.83em;}
+    }
+    .graph {margin: 68px auto; justify-content: space-between;}
+    .graph_item {flex-basis: 25%; max-width: 185px; background: $color_back; box-shadow: 0 15px 20px 0 rgba(21, 29, 65, 0.06); position: relative; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+    .graph_item:after {display: block; padding-bottom: 100%; content:'';}
+    .graph_line, .graph_per {position: absolute; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%);  border-radius: 50%;}
+    .graph_line {border: 2px solid rgba(15, 191, 97, 0.2); box-sizing: border-box;}
+    .graph_per {transform: translate(-50%, -50%) rotate(-45deg); border: 5px solid $color_point; width: 72%; height: 72%;}
+    .graph_text {font-size: 2.4em; font-weight: bold; text-align: center; line-height: 1.4;}
+    .graph_text span {font-size: 0.25em; font-weight: normal; display: block; text-transform: uppercase;}
+    .graph_item:nth-child(1) .graph_per {border-color: transparent $color_point $color_point transparent;}
+    .graph_item:nth-child(2) .graph_per {border-color: transparent $color_point transparent transparent;}
+    .graph_item:nth-child(3) .graph_per {border-color: transparent $color_point $color_point $color_point;}
+    .graph_item:nth-child(4) .graph_per {border-color: transparent $color_point $color_point transparent;}
+}
 
 /* 중단 레이아웃 끝 */
 

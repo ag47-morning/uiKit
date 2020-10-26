@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 값 설정 */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap");
 /* 값 설정 끝 */
 /* 초기화 { */
 html {
@@ -20,7 +20,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.2em;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #151d41; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -61,7 +62,8 @@ select {
 p {
   margin: 0;
   padding: 0;
-  word-break: keep-all; }
+  word-break: keep-all;
+  color: #151d41; }
 
 hr {
   display: none; }
@@ -75,7 +77,6 @@ table {
   border-spacing: 0; }
 
 a {
-  color: #000;
   text-decoration: none; }
 
 *, :after, :before {
@@ -87,7 +88,8 @@ body, p, span, pre, i, b, a {
   font-weight: normal;
   font-style: normal;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #151d41; }
 
 /* } 초기화 끝  */
 /* 레이아웃 기본 설정 */
@@ -107,7 +109,7 @@ body, p, span, pre, i, b, a {
 
 section {
   width: 100%;
-  height: 100vh;
+  height: 98vh;
   position: relative; }
 
 section:after {
@@ -228,6 +230,29 @@ section:after {
   color: #000;
   font-weight: bold; }
 
+.category {
+  display: inline-block;
+  color: #27debf;
+  position: relative;
+  text-transform: uppercase; }
+  .category:after {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 80%;
+    border-radius: 30px;
+    background: #27debf;
+    opacity: 0.1;
+    top: 40%;
+    left: 10%;
+    content: ''; }
+
+.title {
+  color: #151d41;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 30px 0; }
+
 #home .back {
   width: 994px;
   height: 1096px;
@@ -274,10 +299,7 @@ section:after {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 18%; }
-#home .sec_wr > div {
-  display: inline-block;
-  vertical-align: bottom; }
+  padding-top: 17%; }
 #home .sec_txt {
   padding-left: 10%; }
   #home .sec_txt h1 {
@@ -285,10 +307,12 @@ section:after {
     font-size: 4.2em;
     text-transform: capitalize;
     line-height: 1.17;
-    letter-spacing: -3px; }
+    letter-spacing: -3px;
+    color: #000; }
     #home .sec_txt h1 b {
       font-weight: bold;
-      letter-spacing: normal; }
+      letter-spacing: normal;
+      color: #000; }
   #home .sec_txt p {
     font-size: 1.75em;
     line-height: 2.4;
@@ -297,7 +321,8 @@ section:after {
     margin: 47px 0 21px;
     line-height: 1.7; }
     #home .sec_txt .st_btn .rd_btn {
-      line-height: 2; }
+      line-height: 2;
+      font-weight: 600; }
     #home .sec_txt .st_btn .more {
       display: inline-block;
       padding-left: 18px;
@@ -305,9 +330,109 @@ section:after {
       font-size: 1.25em;
       line-height: 1.67; }
 #home .sec_img {
-  background-image: url("../images/main.png");
-  width: 426px;
-  height: 396px; }
+  max-width: 426px; }
+  #home .sec_img img {
+    width: 100%; }
+
+#about .sec_wr {
+  display: flex;
+  justify-content: center;
+  max-width: 904px; }
+#about .intro > div {
+  flex-basis: 40%; }
+#about .sec_img {
+  position: relative;
+  text-align: center;
+  margin-right: 50px;
+  max-width: 450px;
+  background-image: url("../images/dott.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 25%; }
+  #about .sec_img img {
+    width: 431px; }
+#about .rig {
+  width: 50%;
+  border: 30px solid #27debf;
+  position: absolute;
+  top: -16%;
+  left: -13%;
+  z-index: 2;
+  box-sizing: border-box;
+  max-width: 161.6px;
+  border-radius: 50%; }
+#about .rig:after {
+  display: block;
+  padding-bottom: 100%;
+  content: ''; }
+#about .sec_txt {
+  padding-top: 34px;
+  max-width: 322px; }
+  #about .sec_txt h6 {
+    font-size: 0.8em; }
+  #about .sec_txt h3 {
+    font-size: 1.4em;
+    text-transform: capitalize; }
+  #about .sec_txt p {
+    line-height: 1.4;
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 55px; }
+  #about .sec_txt button {
+    padding: 20px 45px;
+    border: 0;
+    font-size: 0.83em; }
+#about .graph {
+  margin: 68px auto;
+  justify-content: space-between; }
+#about .graph_item {
+  flex-basis: 25%;
+  max-width: 185px;
+  background: #fff;
+  box-shadow: 0 15px 20px 0 rgba(21, 29, 65, 0.06);
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+#about .graph_item:after {
+  display: block;
+  padding-bottom: 100%;
+  content: ''; }
+#about .graph_line, #about .graph_per {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; }
+#about .graph_line {
+  border: 2px solid rgba(15, 191, 97, 0.2);
+  box-sizing: border-box; }
+#about .graph_per {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border: 5px solid #27debf;
+  width: 72%;
+  height: 72%; }
+#about .graph_text {
+  font-size: 2.4em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4; }
+#about .graph_text span {
+  font-size: 0.25em;
+  font-weight: normal;
+  display: block;
+  text-transform: uppercase; }
+#about .graph_item:nth-child(1) .graph_per {
+  border-color: transparent #27debf #27debf transparent; }
+#about .graph_item:nth-child(2) .graph_per {
+  border-color: transparent #27debf transparent transparent; }
+#about .graph_item:nth-child(3) .graph_per {
+  border-color: transparent #27debf #27debf #27debf; }
+#about .graph_item:nth-child(4) .graph_per {
+  border-color: transparent #27debf #27debf transparent; }
 
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */
