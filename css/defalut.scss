@@ -37,7 +37,7 @@ body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-famil
 /* 레이아웃 기본 설정 */
 #hd, #ft {width: 100%;}
 #gnb, .sec_wr, .img_wr {max-width: 1140px; margin: 0 auto; padding: 0 10px; position: relative;}
-#container {width: 100%; position: relative; top: -95px;}
+#container {width: 100%; position: relative; top: -105px;}
 section {width: 100%; min-height: 98vh; position: relative;}
 section:after {content: ''; display: block; visibility: hidden; clear: both;}
 
@@ -53,7 +53,7 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
     img {height: 35px; width: auto;}
 }
 #tnb {
-    float: right;
+    float: right; padding-bottom: 10px;
     li {
         display: inline-block;
         a {
@@ -155,8 +155,9 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
 }
 
 #service {
-    .card_wr {margin: 90px auto; max-width : 1063px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
-    .card {box-sizing: border-box; padding: 59px 38px; flex-basis: 40%; box-shadow: 0 20px 20px 0 rgba(118, 130, 183, 0.18); max-width: 521px; max-height: 287px; flex-grow: 1; border-radius: 3px;}
+    background-position: 95% bottom; background-size: 18%; background-image: url('../images/dott.png'); background-repeat: no-repeat;
+    .card_wr {margin: 90px auto; max-width : 1063px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .card {box-sizing: border-box; padding: 59px 38px; flex-basis: 40%; box-shadow: 0 20px 20px 0 rgba(118, 130, 183, 0.18); max-width: 521px; max-height: 287px; flex-grow: 1; border-radius: 3px; background: $color_back;}
     .subject {font-weight: 600; font-size: 1.8em; padding: 18px 0; text-transform: capitalize; position: relative;}
     .card span {font-size: 1.2em; color: #686868;}
     .per {font-size: 3em; font-weight: bold; margin-bottom: 18px;}
@@ -180,6 +181,7 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
     .sttr span:nth-child(2) {left: 50px;}
     .sttr span:nth-child(3) {left: 100px;}
     .btn_m .sttr span {background: $color_back;}
+    .btn_m p {color: $color_back;}
 }
 /* 중단 레이아웃 끝 */
 

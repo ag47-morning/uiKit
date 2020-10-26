@@ -11,14 +11,20 @@ $(document).ready(function(){
     console.log(topArray);
     $(window).on("mousewheel DOMMousewheel scroll", function(){
         var winH = $(this).scrollTop();
-        console.log("현재 "+ winH + typeof winH);
-        console.log(window.pageYOffset);
+        // console.log("현재 "+ winH + typeof winH);
+        // console.log(window.pageYOffset);
+        if(winH > 300) {
+            $("#hd").css("background","#fff");
+        }
+        else {
+            $("#hd").css("background","");
+        }
         if(winH < topArray[1]-300) i=0;
         else if (winH < (topArray[2]-300)) i=1;
         else if (winH < (topArray[3]-300)) i=2;
         else if (winH < (topArray[4]-300)) i=3;
         else if (winH >= (topArray[4]-300)) i=4;
-        console.log(i);
+        // console.log(i);
         $("#tnb li").removeClass("active");
         $("#tnb li").eq(i).addClass("active");
     })
