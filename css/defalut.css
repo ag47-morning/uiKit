@@ -109,7 +109,7 @@ body, p, span, pre, i, b, a {
 
 section {
   width: 100%;
-  height: 98vh;
+  min-height: 98vh;
   position: relative; }
 
 section:after {
@@ -215,7 +215,8 @@ section:after {
 .btn {
   padding: 10px 40px;
   border-radius: 5px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  position: relative; }
 
 .btn_m {
   background: #27debf;
@@ -234,24 +235,49 @@ section:after {
   display: inline-block;
   color: #27debf;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 5.4; }
   .category:after {
     display: block;
     width: 100%;
     position: absolute;
-    height: 80%;
+    height: 20%;
     border-radius: 30px;
     background: #27debf;
     opacity: 0.1;
-    top: 40%;
+    top: 45%;
     left: 10%;
     content: ''; }
 
+.title_wr {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .title {
   color: #151d41;
+  position: relative;
+  text-transform: capitalize;
+  font-size: 2.5em;
   font-weight: bold;
-  line-height: 1.2;
-  padding: 30px 0; }
+  line-height: 1.25;
+  display: inline-block; }
+  .title:after {
+    display: block;
+    width: 90%;
+    height: 70%;
+    border-radius: 30px;
+    background: #27debf;
+    opacity: 0.1;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    box-sizing: content-box; }
 
 #home .back {
   width: 994px;
@@ -372,7 +398,10 @@ section:after {
     font-size: 0.8em; }
   #about .sec_txt h3 {
     font-size: 1.4em;
-    text-transform: capitalize; }
+    color: #151d41;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-bottom: 30px; }
   #about .sec_txt p {
     line-height: 1.4;
     font-size: 1.2em;
@@ -433,6 +462,104 @@ section:after {
   border-color: transparent #27debf #27debf #27debf; }
 #about .graph_item:nth-child(4) .graph_per {
   border-color: transparent #27debf #27debf transparent; }
+
+#service .card_wr {
+  margin: 90px auto;
+  max-width: 1063px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+#service .card {
+  box-sizing: border-box;
+  padding: 59px 38px;
+  flex-basis: 40%;
+  box-shadow: 0 20px 20px 0 rgba(118, 130, 183, 0.18);
+  max-width: 521px;
+  max-height: 287px;
+  flex-grow: 1;
+  border-radius: 3px; }
+#service .subject {
+  font-weight: 600;
+  font-size: 1.8em;
+  padding: 18px 0;
+  text-transform: capitalize;
+  position: relative; }
+#service .card span {
+  font-size: 1.2em;
+  color: #686868; }
+#service .per {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 18px; }
+#service .bar {
+  margin: 5px 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(15, 191, 97, 0.2); }
+#service .bar .bar_fill {
+  height: 100%;
+  background: #27debf;
+  width: 80%; }
+#service .card:nth-child(2) .bar_fill {
+  width: 95%; }
+#service .card:nth-child(3) .bar_fill {
+  width: 85%; }
+#service .card:nth-child(5) .bar_fill {
+  width: 75%; }
+#service .desc {
+  padding: 50px 42px;
+  max-width: 442px;
+  max-height: 517px;
+  flex-grow: 0; }
+#service .icon {
+  width: 35%;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid #27debf; }
+#service .desc:nth-child(1) .icon {
+  background-image: url("../images/desktop1.png"); }
+#service .desc:nth-child(4) .icon {
+  background-image: url("../images/cloud.png");
+  border-color: #fff; }
+#service .desc:nth-child(5) .icon {
+  background-image: url("../images/desktop2.png"); }
+#service .icon:after {
+  display: block;
+  padding-bottom: 100%;
+  content: ''; }
+#service .desc p {
+  line-height: 1.63;
+  margin-bottom: 40px;
+  margin-top: 25px; }
+#service .desc.btn_m .subject {
+  border-bottom-color: #27debf; }
+#service .desc .btn {
+  padding-left: 22px; }
+#service .desc img {
+  height: 11px;
+  position: absolute;
+  right: 15px;
+  top: 12px; }
+#service .sttr {
+  position: relative;
+  width: 100%;
+  height: 3px; }
+#service .sttr span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: 3px;
+  background: #27debf; }
+#service .sttr span:nth-child(2) {
+  left: 50px; }
+#service .sttr span:nth-child(3) {
+  left: 100px; }
+#service .btn_m .sttr span {
+  background: #fff; }
 
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */

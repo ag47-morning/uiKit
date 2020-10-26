@@ -13,11 +13,11 @@ $(document).ready(function(){
         var winH = $(this).scrollTop();
         console.log("현재 "+ winH + typeof winH);
         console.log(window.pageYOffset);
-        if(winH < topArray[1]) i=0;
-        else if (winH < (topArray[2])) i=1;
-        else if (winH < (topArray[3])) i=2;
-        else if (winH < (topArray[4])) i=3;
-        else if (winH >= (topArray[4])) i=4;
+        if(winH < topArray[1]-300) i=0;
+        else if (winH < (topArray[2]-300)) i=1;
+        else if (winH < (topArray[3]-300)) i=2;
+        else if (winH < (topArray[4]-300)) i=3;
+        else if (winH >= (topArray[4]-300)) i=4;
         console.log(i);
         $("#tnb li").removeClass("active");
         $("#tnb li").eq(i).addClass("active");
@@ -31,7 +31,7 @@ $(document).ready(function(){
         i = $(this).index();
         $("#tnb li").removeClass("active");
         $("#tnb li").eq(i).addClass("active");
-        $("html, body").stop().animate({scrollTop:topArray[i]},500,function(){ani=false;});
+        $("html, body").stop().animate({scrollTop:topArray[i]-100},500,function(){ani=false;});
     })
 
     ////// }} scroll event //////
