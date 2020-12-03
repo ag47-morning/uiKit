@@ -199,6 +199,19 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
     .thumb:hover .thumb_desc {display: block;}
     .con_more {padding: 20px 45px;}
 }
+
+#resource {
+    .sec_wr {text-align: center;}
+    .aaa {width: 30px; height: 40px; display: inline-block; margin: 50px 0;}
+    .aaa div{width: 10px; height: 40px; background: $color_point; display: inline-block;}
+    .aaa div:nth-child(2) {background: $color_back;}
+    .b {font-size: 1.2em; font-weight: 600; line-height: 1.63; max-width: 820px; margin: 0 auto;}
+    .name_wr {margin: 40px auto;}
+    .name_name {font-size: 1.98em; text-transform: capitalize;}
+    .name_title {line-height: 3; font-size: 1.08em;}
+    .profile_move {width: 150px; margin: 20px auto;}
+}
+
 /* 중단 레이아웃 끝 */
 
 /* 하단 레이아웃 */

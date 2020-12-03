@@ -635,6 +635,38 @@ section:after {
 #news .con_more {
   padding: 20px 45px; }
 
+#resource .sec_wr {
+  text-align: center; }
+#resource .aaa {
+  width: 30px;
+  height: 40px;
+  display: inline-block;
+  margin: 50px 0; }
+#resource .aaa div {
+  width: 10px;
+  height: 40px;
+  background: #27debf;
+  display: inline-block; }
+#resource .aaa div:nth-child(2) {
+  background: #fff; }
+#resource .b {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.63;
+  max-width: 820px;
+  margin: 0 auto; }
+#resource .name_wr {
+  margin: 40px auto; }
+#resource .name_name {
+  font-size: 1.98em;
+  text-transform: capitalize; }
+#resource .name_title {
+  line-height: 3;
+  font-size: 1.08em; }
+#resource .profile_move {
+  width: 150px;
+  margin: 20px auto; }
+
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */
 /* 하단 레이아웃 끝 */
