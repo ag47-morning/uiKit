@@ -580,6 +580,9 @@ section:after {
   text-align: center;
   margin-bottom: 70px; }
 
+.con_more {
+  padding: 20px 45px; }
+
 #news .thumb_wr {
   display: flex;
   justify-content: flex-start;
@@ -632,8 +635,6 @@ section:after {
   background: #fff; }
 #news .thumb:hover .thumb_desc {
   display: block; }
-#news .con_more {
-  padding: 20px 45px; }
 
 #resource .sec_wr {
   text-align: center; }
@@ -718,6 +719,83 @@ section:after {
 #resource .r3 {
   top: 389.5px;
   left: 26%; }
+
+#contact {
+  margin-top: 100px;
+  margin-bottom: 222px; }
+  #contact .back {
+    width: 994px;
+    height: 1096px;
+    top: -120px;
+    left: 28%; }
+  #contact .card_wr {
+    margin: 60px auto;
+    max-width: 1096px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 480px;
+    padding-bottom: 40px; }
+  #contact .card {
+    box-sizing: border-box;
+    flex-basis: 33%;
+    box-shadow: 0 20px 20px 0 rgba(118, 130, 183, 0.18);
+    max-width: 336px;
+    max-height: 446px;
+    flex-grow: 1;
+    border-radius: 5px;
+    background: #fff;
+    width: 336px;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-right: 44px; }
+  #contact .card_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 219px; }
+  #contact .card_line {
+    width: 20%;
+    margin: 15px 0; }
+  #contact .card_line > div {
+    width: 30%;
+    height: 3px;
+    display: inline-block;
+    padding: 0; }
+  #contact .card_line .mint {
+    background: #27debf; }
+  #contact .card_line .white {
+    background: #fff; }
+  #contact .card_desc {
+    padding: 10px 20px 27px; }
+  #contact .card_desc h6 {
+    color: #27debf;
+    line-height: 1.94; }
+  #contact .card_desc p {
+    color: #151d41;
+    line-height: 1.4; }
+  #contact .card_desc b {
+    color: #151d41; }
+  #contact .card a {
+    color: #27debf;
+    padding: 10px 20px 27px;
+    display: inline-block;
+    line-height: 1.94; }
+  #contact .card a img {
+    height: 10px;
+    padding-left: 10px; }
+  #contact .card:nth-child(4n) .card_img {
+    background-image: url("../images/b1.png"); }
+  #contact .card:nth-child(4n+1) .card_img {
+    background-image: url("../images/b2.png"); }
+  #contact .card:nth-child(4n+2) .card_img {
+    background-image: url("../images/b3.png"); }
+  #contact .card:nth-child(4n+3) .card_img {
+    background-image: url("../images/b2.png"); }
+  #contact .card:nth-child(3n) {
+    margin-right: 0; }
 
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */

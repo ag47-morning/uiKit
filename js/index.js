@@ -73,6 +73,17 @@ $(function(){
         $("#news .thumb_wr").css("max-height",newsH+"px");
         $("html, body").stop().animate({scrollTop:$("#news").offset().top + thumbH},300);
     })
+
+    var con_card = $("#contact .card");
+    var conH = $("#contact .card").eq(0).outerHeight(true);
+    var contactH = conH * Math.ceil(con_card.length/3);
+    $("#contact .con_more").on("click", function(e){
+        e.preventDefault();
+        $("contact .con_more").css("display","none");
+        $("#contact .card_wr").css("max-height",contactH+"px");
+        $("html, body").stop().animate({scrollTop:$("#contact").offset().top + contactH/2.5},300);
+
+    })
 })
 
 $(function(){
