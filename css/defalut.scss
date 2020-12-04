@@ -35,16 +35,18 @@ body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-famil
 
 /* } 초기화 끝  */
 /* 레이아웃 기본 설정 */
+body {overflow: hidden;}
 #hd, #ft {width: 100%;}
-#gnb, .sec_wr, .img_wr {max-width: 1140px; margin: 0 auto; padding: 0 10px; position: relative;}
-#container {width: 100%; position: relative; top: -105px;}
+#gnb, .sec_wr {max-width: 1140px; margin: 0 auto; padding: 0 10px; position: relative;}
+#container {width: 100%; position: relative;}
+#ft {position: relative;}
 section {width: 100%; position: relative; margin: 50px 0;}
 section:after {content: ''; display: block; visibility: hidden; clear: both;}
 
 /* 상단 레이아웃 */
-#hd {position: sticky; position: -webkit-sticky; top: 0px; left: 0; background: transparent; z-index: 999999;}
+#hd {position: fixed; position: -webkit-sticky; top: 50px; left: 0; background: transparent; z-index: 999999;}
 #gnb {
-    margin-top: 50px; padding-top: 10px;
+    padding-top: 10px;
     &:after {clear: both; visibility: hidden; content: ''; display: block;}
 }
 #logo {
@@ -93,15 +95,15 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
 
 #home {
     .back {width: 994px; height: 1096px; left: 30%; top: -230px;}
-    .line1 {width: 391px; height: 468px; left: -15%; top: 217px;}
+    .line1 {width: 391px; height: 468px; left: -8%; top: 217px;}
     .line2 {width: 439px; height: 406px; left: 36%; top: 299px;}
     .r1 {top: 185px; left: 81%;}
-    .r2 {top: 426px; left: 99%;}
-    .r3 {top: 779px; left: 101%;}
+    .r2 {top: 426px; left: 94%;}
+    .r3 {top: 779px; left: 96%;}
     .r4 {top: 681px; left: 34%;}
     .r5 {top: 267px; left: 32%;}
-    .r6 {top: 607px; left: 4.5%;}
-    .r7 {top: 525px; left: 52.4%; opacity: 0.06;}
+    .r6 {top: 607px; left: 10%;}
+    .r7 {top: 525px; left: 48.4%; opacity: 0.06;}
     .sec_wr::after {content: ''; display: block; visibility: hidden; clear: both;}
     .sec_wr {display: flex; justify-content: space-between; align-items: flex-start; padding: 17% 0;}
     .sec_txt {
@@ -253,10 +255,48 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
     .card:nth-child(4n+2) .card_img {background-image: url('../images/b3.png');}
     .card:nth-child(4n+3) .card_img {background-image: url('../images/b2.png');}
     .card:nth-child(3n) {margin-right: 0;}
-
-
 }
 /* 중단 레이아웃 끝 */
 
 /* 하단 레이아웃 */
+#message {
+    .map {background-image: url('../images/map.png'); width: 776px; height: 378px; top: -100px; left: 20%;}
+    .dott {left: 0; top: 400px; height: 344px; width: 140px; background-size: cover; }
+
+    .table {max-width: 891px; margin: 60px auto;}
+    table {
+        border: 0; width: 100%; 
+        input, select {width: 100%; padding: 15px; border-radius: 5px; border: 1px solid $color_head; color: $color_head; background: $color_back;}
+        th {border: 20px solid transparent;}
+        #ma {height: 150px;}
+    }
+    .more_wr {margin-top: 58px;}
+}
+#foot {
+    margin: 120px 0 20px; padding-top: 50px;
+    .sec_wr {max-width: 1006px;}
+    .sec_wr {position: relative;}
+    .ft_t:after, .ft_b:after {content:''; display: block; clear: both; visibility: hidden;}
+    p {color: $color_head;}
+    .ft_t {
+        margin-bottom: 30px;
+        #logo_ft {float: left; margin-top: 5px;}
+        p {width: 460px; float: right; line-height: 1.57; font-weight: 600; font-size: 1.4em;}
+    }
+    
+    .ft_b {
+        margin-bottom: 55px;
+        p {width: 285px; float: left; line-height: 1.63;}
+        ul {float: right;}
+        li {float: left; margin: 0 15px; max-width: 160px;}
+        li h6 {color: $color_point; font-size: 1.2em; line-height: 1.94;}
+        li p {line-height: 1.3; color: $color_head;}
+    }
+    .ft_copy {border-top: 1px solid $color_point; padding-top: 15px; text-align: center; line-height: 1.94;}
+}
+#scroll {
+    position: absolute; left: 90%; top: -20px; background: $color_point; border-radius: 50%; width: 54px; height: 54px; border: 0; display: block;
+    img {width: 16px;}
+    
+}
 /* 하단 레이아웃 끝 */

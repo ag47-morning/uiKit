@@ -13,11 +13,20 @@ $(document).ready(function(){
         var winH = $(this).scrollTop();
         // console.log("현재 "+ winH + typeof winH);
         // console.log(window.pageYOffset);
+        var hd = $("#hd").css("top");
+        var hdM = Number(hd.split('px')[0]);
+        var hdt = hdM - winH/3;
+        if(winH > 0) {
+            if (hdt < 0) hdt = 0;
+            $("#hd").css("top",hdt+"px");
+        }
         if(winH > 300) {
             $("#hd").css("background","#fff");
+            // $("#scroll").css("display","block").stop().animate({opacity:1},200);
         }
         else {
             $("#hd").css("background","");
+            // $("#scroll").stop().animate({opacity:0},200,function(){$("#scroll").css("display","none")});
         }
 
         if(winH < topArray[1]-300) i=0;
@@ -106,4 +115,11 @@ $(function(){
         profile_title.text(title_chan);
     })
 
+})
+
+$(function(){
+    ///// scroll top button
+    $("#scroll").on("click", function(){
+        $("html, body").stop().animate({scrollTop:0},600);
+    })
 })

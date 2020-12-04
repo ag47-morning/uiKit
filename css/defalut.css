@@ -93,10 +93,13 @@ body, p, span, pre, i, b, a {
 
 /* } 초기화 끝  */
 /* 레이아웃 기본 설정 */
+body {
+  overflow: hidden; }
+
 #hd, #ft {
   width: 100%; }
 
-#gnb, .sec_wr, .img_wr {
+#gnb, .sec_wr {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 10px;
@@ -104,8 +107,10 @@ body, p, span, pre, i, b, a {
 
 #container {
   width: 100%;
-  position: relative;
-  top: -105px; }
+  position: relative; }
+
+#ft {
+  position: relative; }
 
 section {
   width: 100%;
@@ -120,15 +125,14 @@ section:after {
 
 /* 상단 레이아웃 */
 #hd {
-  position: sticky;
+  position: fixed;
   position: -webkit-sticky;
-  top: 0px;
+  top: 50px;
   left: 0;
   background: transparent;
   z-index: 999999; }
 
 #gnb {
-  margin-top: 50px;
   padding-top: 10px; }
   #gnb:after {
     clear: both;
@@ -288,7 +292,7 @@ section:after {
 #home .line1 {
   width: 391px;
   height: 468px;
-  left: -15%;
+  left: -8%;
   top: 217px; }
 #home .line2 {
   width: 439px;
@@ -300,10 +304,10 @@ section:after {
   left: 81%; }
 #home .r2 {
   top: 426px;
-  left: 99%; }
+  left: 94%; }
 #home .r3 {
   top: 779px;
-  left: 101%; }
+  left: 96%; }
 #home .r4 {
   top: 681px;
   left: 34%; }
@@ -312,10 +316,10 @@ section:after {
   left: 32%; }
 #home .r6 {
   top: 607px;
-  left: 4.5%; }
+  left: 10%; }
 #home .r7 {
   top: 525px;
-  left: 52.4%;
+  left: 48.4%;
   opacity: 0.06; }
 #home .sec_wr::after {
   content: '';
@@ -799,6 +803,101 @@ section:after {
 
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */
+#message .map {
+  background-image: url("../images/map.png");
+  width: 776px;
+  height: 378px;
+  top: -100px;
+  left: 20%; }
+#message .dott {
+  left: 0;
+  top: 400px;
+  height: 344px;
+  width: 140px;
+  background-size: cover; }
+#message .table {
+  max-width: 891px;
+  margin: 60px auto; }
+#message table {
+  border: 0;
+  width: 100%; }
+  #message table input, #message table select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #151d41;
+    color: #151d41;
+    background: #fff; }
+  #message table th {
+    border: 20px solid transparent; }
+  #message table #ma {
+    height: 150px; }
+#message .more_wr {
+  margin-top: 58px; }
+
+#foot {
+  margin: 120px 0 20px;
+  padding-top: 50px; }
+  #foot .sec_wr {
+    max-width: 1006px; }
+  #foot .sec_wr {
+    position: relative; }
+  #foot .ft_t:after, #foot .ft_b:after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden; }
+  #foot p {
+    color: #151d41; }
+  #foot .ft_t {
+    margin-bottom: 30px; }
+    #foot .ft_t #logo_ft {
+      float: left;
+      margin-top: 5px; }
+    #foot .ft_t p {
+      width: 460px;
+      float: right;
+      line-height: 1.57;
+      font-weight: 600;
+      font-size: 1.4em; }
+  #foot .ft_b {
+    margin-bottom: 55px; }
+    #foot .ft_b p {
+      width: 285px;
+      float: left;
+      line-height: 1.63; }
+    #foot .ft_b ul {
+      float: right; }
+    #foot .ft_b li {
+      float: left;
+      margin: 0 15px;
+      max-width: 160px; }
+    #foot .ft_b li h6 {
+      color: #27debf;
+      font-size: 1.2em;
+      line-height: 1.94; }
+    #foot .ft_b li p {
+      line-height: 1.3;
+      color: #151d41; }
+  #foot .ft_copy {
+    border-top: 1px solid #27debf;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 1.94; }
+
+#scroll {
+  position: absolute;
+  left: 90%;
+  top: -20px;
+  background: #27debf;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  display: block; }
+  #scroll img {
+    width: 16px; }
+
 /* 하단 레이아웃 끝 */
 
 /*# sourceMappingURL=defalut.css.map */
