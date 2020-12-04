@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI KIT SAMPLE</title>
@@ -278,6 +278,12 @@
             </div>
         </section>
         <section id="resource">
+            <div class="img_wr">
+                <div class="path pic line1"></div>
+                <div class="path ring r1"></div>
+                <div class="path ring r2"></div>
+                <div class="path round r3"></div>
+            </div>
             <div class="sec_wr">
                 <div class="title_wr">
                     <h6 class="category">TESTIMONIALS</h6>
@@ -286,24 +292,31 @@
                 <div class="aaa"><div></div><div></div><div></div></div>
                 <p class="b">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus possimus hic voluptatibus! Ea cupiditate voluptas beatae nihil alias dolores fugit provident accusantium tenetur eos reprehenderit quae animi, a aperiam odio.</p>
                 <div class="name_wr">
-                    <h3 class="name_name">john doe</h3>
-                    <p class="name_title">CEO, ABC Company</p>
+                    <h3 id="name_name">john doe</h3>
+                    <p id="name_title">CEO, ABC Company</p>
                     <div class="profile_move">
-                        <div class="move_pager">
+                        <div id="move_pager">
                             <a href="#"></a>
-                            <a href="#"></a>
+                            <a class="active" href="#"></a>
                             <a href="#"></a>
                         </div>
-                        <div class="profile">
-                            <div><img src="images/pro1.jpg" alt="profile 1"></div>
-                            <div><img src="images/pro2.png" alt="profile 2"></div>
-                            <div><img src="images/pro3.jpg" alt="profile 3"></div>
+                        <div id="profile">
+                            <div class="profile_cir" data-name="dog doe" data-title="COO, ABC Company"><img src="images/pro1.jpg" alt="profile 1"></div>
+                            <div class="profile_cir show" data-name="john doe" data-title="CEO, ABC Company"><img src="images/pro2.png" alt="profile 2"></div>
+                            <div class="profile_cir" data-name="cat doe" data-title="CAO, ABC Company"><img src="images/pro3.jpg" alt="profile 3"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact"></section>
+        <section id="contact">
+            <div class="img_wr">
+                <div class="path pic back"></div>
+            </div>
+            <div class="sec_wr">
+                
+            </div>
+        </section>
     </div>
     <div id="ft"></div>
 </body>

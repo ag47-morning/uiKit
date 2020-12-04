@@ -641,7 +641,7 @@ section:after {
   width: 30px;
   height: 40px;
   display: inline-block;
-  margin: 50px 0; }
+  margin: 40px 0; }
 #resource .aaa div {
   width: 10px;
   height: 40px;
@@ -657,15 +657,67 @@ section:after {
   margin: 0 auto; }
 #resource .name_wr {
   margin: 40px auto; }
-#resource .name_name {
+#resource #name_name {
   font-size: 1.98em;
   text-transform: capitalize; }
-#resource .name_title {
+#resource #name_title {
   line-height: 3;
   font-size: 1.08em; }
 #resource .profile_move {
-  width: 150px;
+  max-width: 150px;
   margin: 20px auto; }
+#resource #move_pager {
+  margin-bottom: 20px; }
+  #resource #move_pager a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    display: inline-block;
+    margin: 0 3px; }
+  #resource #move_pager a.active {
+    background: #27debf; }
+#resource #profile {
+  width: 100%;
+  position: relative;
+  height: 100px; }
+  #resource #profile .profile_cir {
+    width: 86px;
+    height: 86px;
+    box-sizing: border-box;
+    border: 2px solid #27debf;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    position: absolute;
+    overflow: hidden;
+    background: #fff; }
+  #resource #profile .profile_cir img {
+    width: 100%; }
+  #resource #profile .profile_cir:nth-child(1) {
+    left: 3%; }
+  #resource #profile .profile_cir.show {
+    transform: translate(-50%, -50%) scale(1.2);
+    border-width: 4px;
+    z-index: 2; }
+  #resource #profile .profile_cir:nth-child(3) {
+    left: 97%; }
+#resource .line1 {
+  width: 389.3px;
+  height: 466.1px;
+  top: 0;
+  left: 7%;
+  opacity: 0.5; }
+#resource .r1 {
+  top: 28.5px;
+  right: 25%; }
+#resource .r2 {
+  top: 462.5px;
+  left: 60%; }
+#resource .r3 {
+  top: 389.5px;
+  left: 26%; }
 
 /* 중단 레이아웃 끝 */
 /* 하단 레이아웃 */

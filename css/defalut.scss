@@ -202,14 +202,31 @@ section:after {content: ''; display: block; visibility: hidden; clear: both;}
 
 #resource {
     .sec_wr {text-align: center;}
-    .aaa {width: 30px; height: 40px; display: inline-block; margin: 50px 0;}
+    .aaa {width: 30px; height: 40px; display: inline-block; margin: 40px 0;}
     .aaa div{width: 10px; height: 40px; background: $color_point; display: inline-block;}
     .aaa div:nth-child(2) {background: $color_back;}
     .b {font-size: 1.2em; font-weight: 600; line-height: 1.63; max-width: 820px; margin: 0 auto;}
     .name_wr {margin: 40px auto;}
-    .name_name {font-size: 1.98em; text-transform: capitalize;}
-    .name_title {line-height: 3; font-size: 1.08em;}
-    .profile_move {width: 150px; margin: 20px auto;}
+    #name_name {font-size: 1.98em; text-transform: capitalize;}
+    #name_title {line-height: 3; font-size: 1.08em;}
+    .profile_move {max-width: 150px; margin: 20px auto;}
+    #move_pager {
+        margin-bottom: 20px;
+        a{width: 10px; height: 10px; border-radius: 50%; background: #000; display: inline-block; margin: 0 3px;}
+        a.active {background: $color_point;}
+    }
+    #profile {
+        width: 100%; position: relative; height: 100px;
+        .profile_cir {width: 86px; height: 86px; box-sizing: border-box; border: 2px solid $color_point; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.6); position: absolute; overflow: hidden; background: $color_back;}
+        .profile_cir img {width: 100%;}
+        .profile_cir:nth-child(1) {left: 3%;}
+        .profile_cir.show {transform:translate(-50%, -50%) scale(1.2); border-width: 4px; z-index: 2;}
+        .profile_cir:nth-child(3) {left: 97%;}
+    }
+    .line1 {width: 389.3px; height: 466.1px; top: 0; left: 7%; opacity: 0.5;}
+    .r1 {top: 28.5px; right: 25%;}
+    .r2 {top: 462.5px; left: 60%;}
+    .r3 {top: 389.5px; left: 26%;}
 }
 
 /* 중단 레이아웃 끝 */

@@ -74,3 +74,25 @@ $(function(){
         $("html, body").stop().animate({scrollTop:$("#news").offset().top + thumbH},300);
     })
 })
+
+$(function(){
+    /// profile move event
+    var pager = $("#move_pager a");
+    var profile_name = $("#name_name");
+    var profile_title = $("#name_title");
+    var profile_img = $("#profile .profile_cir");
+
+    pager.on("click", function(e){
+        e.preventDefault();
+        var pager_i = $(this).index();
+        pager.removeClass('active');
+        pager.eq(pager_i).addClass('active');
+        profile_img.removeClass('show');
+        profile_img.eq(pager_i).addClass('show');
+        var name_chan = profile_img.eq(pager_i).data("name");
+        var title_chan = profile_img.eq(pager_i).data("title");
+        profile_name.text(name_chan);
+        profile_title.text(title_chan);
+    })
+
+})
